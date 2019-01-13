@@ -305,7 +305,7 @@ endfunction(set_nana_test)
 
 
 set (source_dir )
-set (sources calculator notepad)
+set (sources src/calculator src/notepad)
 
 set_nana_test(source_dir sources)
 # copy this dir to reuse e resources (images)
