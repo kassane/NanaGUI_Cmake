@@ -1,0 +1,17 @@
+.vscode/settings.json
+build/CMakeCache.txt
+build/build.ninja
+build/cmake_install.cmake
+build/compile_commands.json
+build/rules.ninja
+build/CMakeFiles/CMakeOutput.log
+build/CMakeFiles/TargetDirectories.txt
+build/CMakeFiles/cmake.check_cache
+build/CMakeFiles/feature_tests.bin
+build/CMakeFiles/feature_tests.cxx
+build/CMakeFiles/3.13.0/CMakeCXXCompiler.cmake
+build/CMakeFiles/3.13.0/CMakeDetermineCompilerABI_CXX.bin
+build/CMakeFiles/3.13.0/CMakeRCCompiler.cmake
+build/CMakeFiles/3.13.0/CMakeSystem.cmake
+build/CMakeFiles/3.13.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
+build/CMakeFiles/3.13.0/CompilerIdCXX/a.exe
