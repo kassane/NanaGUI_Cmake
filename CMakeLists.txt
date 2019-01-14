@@ -21,7 +21,7 @@
 #  https://bbs.archlinux.org/viewtopic.php?id=84967
 
 project(nana_demo LANGUAGES CXX)
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.6)
 
 # TODO: Enforce compatibility with the already compiled nana
 option(NANA_CMAKE_ENABLE_MINGW_STD_THREADS_WITH_MEGANZ "replaced boost.thread with meganz's mingw-std-threads." ON)
@@ -295,17 +295,17 @@ message("nana_include= " ${nana_include})
 
 function(set_nana_test dir files)
     foreach ( test ${${files}})
-        add_executable(${test} "${${dir}}${test}.cpp")
+        add_executable(${test} "${${dir}}/${test}.cpp")
         set_property( TARGET ${test} PROPERTY CXX_STANDARD 17 )
         target_link_libraries(${test} ${nana_lib} ${NANA_LINKS})
         install(TARGETS ${test} RUNTIME DESTINATION "${NANA_INSTALL_PATH}bin")
-        message("... to build:  ${${dir}}${test}.cpp" )
+        message("... to build:  ${${dir}}/${test}.cpp" )
     endforeach( test ${${files}})
 endfunction(set_nana_test)
 
 
-set (source_dir )
-set (sources src/calculator src/notepad)
+set (source_dir src)
+set (sources notepad calculator SimpleGUI)
 
 set_nana_test(source_dir sources)
 # copy this dir to reuse e resources (images)
