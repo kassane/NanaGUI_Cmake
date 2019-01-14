@@ -2,9 +2,10 @@
 #include <nana/gui/widgets/label.hpp>
 #include <nana/gui/widgets/button.hpp>
 
+using namespace nana;
+
 int main()
 {
-    using namespace nana;
 
     //Define a form.
     form fm;
