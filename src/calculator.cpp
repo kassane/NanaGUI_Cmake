@@ -21,6 +21,11 @@
 
 #include <thread>
 
+#if __has_include(<windows.h>)
+    #include <windows.h>
+    #pragma message "Windows OS"
+#endif
+
 using namespace nana;
 
 // workaround insufficiency in VS2013.
@@ -175,6 +180,9 @@ void opkey_pressed(stateinfo& state, const arg_click& arg)
 
 int main()
 {
+	#if __has_include(<windows.h>)
+        FreeConsole();
+    #endif
 	form fm;
 	fm.caption(("Calculator"));
 	

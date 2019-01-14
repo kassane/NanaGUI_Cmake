@@ -25,6 +25,10 @@
 #include <thread>
 #include <iostream>
 
+#if __has_include(<windows.h>)
+    #include <windows.h>
+    #pragma message "Windows OS"
+#endif
 
 using namespace nana;
 
@@ -147,6 +151,9 @@ void Wait(unsigned wait=0)
 
 int main()
 {
+    #if __has_include(<windows.h>)
+        FreeConsole();
+    #endif
     notepad_form npform;
     npform.show();
     exec(

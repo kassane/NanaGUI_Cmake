@@ -12,3 +12,7 @@ build/CMakeFiles/3.13.0/*.cmake
 build/CMakeFiles/3.13.0/*.bin
 build/CMakeFiles/3.13.0/CompilerIdCXX/*.cpp
 build/CMakeFiles/3.13.0/CompilerIdCXX/a.*
+build/*.exe
+build/.ninja_deps
+build/.ninja_log
+build/CMakeFiles/*.dir/src/*.cpp.obj
